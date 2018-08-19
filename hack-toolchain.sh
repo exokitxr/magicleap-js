@@ -2,7 +2,7 @@
 
 const path = require('path');
 
-const {MLSDK} = process.env;
+const MLSDK = process.env['MLSDK'] || '/mnt/c/Users/avaer/MagicLeap/mlsdk/v0.16.0';
 
 const binDir = path.join(__dirname, 'tools', 'toolchains', 'bin');
 const hacks = [
