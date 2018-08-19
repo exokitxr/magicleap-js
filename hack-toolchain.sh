@@ -5,7 +5,7 @@ const fs = require('fs');
 
 const MLSDK = process.env['MLSDK'] || '/mnt/c/Users/avaer/MagicLeap/mlsdk/v0.16.0';
 
-const binDir = path.join(__dirname, 'tools', 'toolchains', 'bin');
+const binDir = path.join(MLSDK, 'tools', 'toolchains', 'bin');
 const ccJs = path.join(__dirname, 'cc.js');
 const arJs = path.join(__dirname, 'ar.js');
 const hacks = [
