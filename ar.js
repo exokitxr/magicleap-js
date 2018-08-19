@@ -16,8 +16,17 @@ argv = argv.map(a => {
       a = a.replace(/\/mnt\/c\//, 'C:/').replace(/\//g, '\\');
     }
   }
+  /* if (a === '-lrt') {
+    a = '-lclang_rt.ubsan_standalone-aarch64-android';
+  } */
   return a;
 });
+/* (() => {
+  const index = argv.indexOf('-lclang_rt.ubsan_standalone-aarch64-android');
+  if (index !== -1) {
+    argv = argv.splice(index, 0, '-llog');
+  }
+})(); */
 
 try {
   child_process.execFileSync(argv[1], argv.slice(2), {
