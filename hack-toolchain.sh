@@ -6,34 +6,36 @@ const fs = require('fs');
 const MLSDK = process.env['MLSDK'] || '/mnt/c/Users/avaer/MagicLeap/mlsdk/v0.16.0';
 
 const binDir = path.join(__dirname, 'tools', 'toolchains', 'bin');
+const ccJs = path.join(__dirname, 'cc.js');
+const arJs = path.join(__dirname, 'ar.js');
 const hacks = [
   {
     dst: path.join(binDir, 'clang'),
-    src: 'cc.js',
+    src: ccJs,
   },
   {
     dst: path.join(binDir, 'clang++'),
-    src: 'cc.js',
+    src: ccJs,
   },
   {
-    path: path.join(binDir, 'aarch64-linux-android-gcc'),
-    src: 'cc.js',
+    dst: path.join(binDir, 'aarch64-linux-android-gcc'),
+    src: ccJs,
   },
   {
     dst: path.join(binDir, 'aarch64-linux-android-g++'),
-    src: 'cc.js',
+    src: ccJs,
   },
   {
     dst: path.join(binDir, 'aarch64-linux-android-ld'),
-    src: 'cc.js',
+    src: ccJs,
   },
   {
     dst: path.join(binDir, 'aarch64-linux-android-ar'),
-    src: 'ar.js',
+    src: arJs,
   },
   {
     dst: path.join(binDir, 'aarch64-linux-android-ranlib'),
-    src: 'ar.js',
+    src: arJs,
   },
 ];
 
