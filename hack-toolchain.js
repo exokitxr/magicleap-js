@@ -47,6 +47,12 @@ if (process.argv[2] !== '-u') {
 } else {
   hacks.forEach(hack => {
     const {dst} = hack;
-    fs.unlinkSync(dst);
+    try {
+      fs.unlinkSync(dst);
+    } catch(err) {
+      if (err.code !== 'ENOENT') {
+        throw err;
+      }
+    }
   });
 }
