@@ -30,6 +30,14 @@ const hacks = [
     src: ccJs,
   },
   {
+    dst: path.join(binDir, 'aarch64-linux-android-nm'),
+    src: arJs,
+  },
+  {
+    dst: path.join(binDir, 'aarch64-linux-android-strings'),
+    src: arJs,
+  },
+  {
     dst: path.join(binDir, 'aarch64-linux-android-ar'),
     src: arJs,
   },
