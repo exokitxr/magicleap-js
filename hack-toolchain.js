@@ -49,6 +49,10 @@ const hacks = [
     dst: path.join(binDir, 'aarch64-linux-android-ranlib'),
     src: arJs,
   },
+  {
+    dst: path.join(binDir, 'aarch64-linux-android-objcopy'),
+    src: arJs,
+  },
 ];
 
 if (process.argv[2] !== '-u') {

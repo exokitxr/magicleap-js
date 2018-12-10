@@ -10,7 +10,7 @@ argv = argv.filter(a => a !== '-m64');
 argv.splice(2, 0, `--sysroot=${path.join(__dirname, '..', '..', '..', 'lumin')}`);
 argv = argv.map(a => {
   if (/\/mnt\/[a-z]\//.test(a)) {
-    if (/(?:clang|clang\+\+|gcc|g\+\+|\-ar|\-ld|\-as|-nm|\-strings|\-ranlib)$/.test(a)) {
+    if (/(?:clang|clang\+\+|gcc|g\+\+|\-ar|\-ld|\-as|-nm|\-strings|\-ranlib|\-objcopy)$/.test(a)) {
       a += '.exe';
     } else {
       a = a.replace(/\/mnt\/([a-z])\//, '$1:/').replace(/\//g, '\\');
