@@ -24,7 +24,7 @@ argv = argv.map(a => {
 (() => {
   const index = argv.indexOf('-lclang_rt.ubsan_standalone-aarch64-android');
   if (index !== -1) {
-    argv = argv.splice(index, 0, '-llog');
+    argv.splice(index, 0, '-llog');
   }
 })();
 
