@@ -3,7 +3,7 @@
 const path = require('path');
 const fs = require('fs');
 
-const MLSDK = process.env['MLSDK'] || '/mnt/c/Users/avaer/MagicLeap/mlsdk/v0.18.0';
+const MLSDK = process.env['MLSDK'] || '/mnt/c/Users/avaer/MagicLeap/mlsdk/v0.19.0';
 
 const binDir = path.join(MLSDK, 'tools', 'toolchains', 'bin');
 const ccJs = path.join(__dirname, 'cc.js');
